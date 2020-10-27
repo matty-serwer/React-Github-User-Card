@@ -5,9 +5,6 @@ export default class Follower extends Component {
         super();
     }
 
-    componentDidMount() {
-        console.log(this.props.followerData.name);
-    }
 
     render() {
         return (
