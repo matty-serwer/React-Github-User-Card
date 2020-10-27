@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Card, CardText, CardBody, CardTitle, CardSubtitle } from 'reactstrap'
 
 
 export default class UserCard extends Component {
@@ -8,12 +9,12 @@ export default class UserCard extends Component {
    
     render() {
         return (
-            <div className='card user-card'>
-                <h3 className='card-name'>{this.props.userData.name}</h3>
+            <Card color='primary' className='card'>
+                <CardTitle className="display-4">{this.props.userData.name}</CardTitle>
                 <img src={this.props.userData.avatar_url} alt={this.props.userData.avatar_url} />
                 <p>Bio: {this.props.userData.bio}</p>
                 <a href={this.props.userData.html_url}>{this.props.userData.html_url}</a>
-            </div>
+            </Card>
         )
     }
 }

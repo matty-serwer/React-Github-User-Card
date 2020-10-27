@@ -36,3 +36,39 @@
     transform: rotate(360deg);
   }
 }
+
+.follower:hover{
+  cursor:pointer;
+}
+
+.card {
+  width: 30rem;
+  margin: 5% auto;
+  color: white;
+}
+
+.card a {
+  text-decoration: none;
+  color: white;
+}
+
+.App h3 {
+  border-bottom: 2px solid black;
+}
+
+#userSearch {
+  margin: 1rem auto;
+}
+
+/* #body-container {
+  width: 32rem;
+  margin: auto;
+} */
+
+.followers {
+  margin-top: 5%;
+}
+
+body {
+  background: #c3c3d8;
+}
