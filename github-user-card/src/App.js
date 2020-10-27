@@ -76,7 +76,12 @@ handleSubmit = (e) => {
   //   .catch(error => {
   //     console.log(error)
   //   })
+}
 
+clickHandler = (e) => {
+  console.log(e.target.textContent)
+  this.getUser(e.target.textContent)
+  this.getFollowers(e.target.textContent)
 }
 
 render() {
@@ -93,7 +98,7 @@ render() {
       <UserCard userData={this.state.userData} />
       <h3>Followers:</h3>
       {this.state.followers.map(follower => {
-        return <Follower followerData={follower} key={follower.login}/>
+        return <Follower followerData={follower} key={follower.login} clickHandler={this.clickHandler}/>
       })}
       
     </div>

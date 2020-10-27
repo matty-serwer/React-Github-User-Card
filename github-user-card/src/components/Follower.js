@@ -5,10 +5,11 @@ export default class Follower extends Component {
         super();
     }
 
+    handleClick = (e) => this.props.clickHandler(e)
 
     render() {
         return (
-            <div className='followers'>
+            <div className='follower' onClick={this.handleClick}>
                 <h4 className='card-name'>{this.props.followerData.login}</h4>
             </div>
         )
