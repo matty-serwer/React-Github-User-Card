@@ -41,48 +41,19 @@ class App extends React.Component {
   componentDidMount() {
     this.getUser("matty-serwer");
     this.getFollowers("matty-serwer");
-    // axios.get(`https://api.github.com/users/matty-serwer`)
-    //   .then(response => {
-    //     this.setState({
-    //       userData: response.data
-    //     })
-    //   })
-    //   .catch(error => {
-    //     console.log(error)
-    //   })
-    // axios.get(`https://api.github.com/users/matty-serwer/followers`)
-    //   .then(response => {
-    //     this.setState({
-    //       followers: response.data
-    //     })
-    //   })
-    //   .catch(error => {
-    //     console.log(error)
-    //   })
   }
 
   handleChange = (e) => {
     this.setState({ userSearch: e.target.value });
-    // console.log(this.state.userSearch)
   };
 
   handleSubmit = (e) => {
     e.preventDefault();
     this.getUser(this.state.userSearch);
     this.getFollowers(this.state.userSearch);
-    // axios.get(`https://api.github.com/users/${this.state.userSearch}`)
-    //   .then(response => {
-    //     this.setState({
-    //       userData: response.data
-    //     })
-    //   })
-    //   .catch(error => {
-    //     console.log(error)
-    //   })
   };
 
   clickHandler = (e) => {
-    console.log(e.target.textContent);
     this.getUser(e.target.textContent);
     this.getFollowers(e.target.textContent);
   };
@@ -93,8 +64,6 @@ class App extends React.Component {
         <h1 className='display-3'>Github User Card</h1>
         <Container id='body-container'>
           <Form onSubmit={this.handleSubmit}>
-            {/* <label htmlFor='userSearch' className='search'>
-          Search </label> */}
             <Input
               value={this.state.userSearch}
               onChange={this.handleChange}
